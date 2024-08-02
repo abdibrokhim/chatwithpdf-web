@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Custom ChatGPT PDF Cruncher
 
-## Getting Started
+## Description
 
-First, run the development server:
+This is a custom implementation of the ChatGPT model from OpenAI. It is a chatbot that can be used to answer questions about a PDF document. The PDF document is uploaded to the server and the server will process the PDF and return a JSON object with the answers to the questions. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Powered by
+Cohere.ai - https://cohere.ai/
+OpenAI - https://openai.com/
+
+
+## Pre-requisites
+
+Get Cohere API Key from https://cohere.ai/
+Get OpenAI API Key from https://beta.openai.com/
+
+Go to `backend` and create file: `.env` and paste your 
+Cohere API key in the `COHERE_API_KEY="your-api-key"` field
+OpenAI API key in the `OPENAI_API_KEY="your-api-key"` field
+
+Go to `backend` and create new folder `files`
+
+
+## Installation
+
+### Frontend
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`**Note**`:
+If there is an error, simple remove the package-lock.json file and run the command again.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+npm start
+```
 
-## Learn More
+### Backend
 
-To learn more about Next.js, take a look at the following resources:
+```
+cd backend
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+python3 -m venv .venv
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`**Note**`:
+Make sure you are using Python version less than 3.9
 
-## Deploy on Vercel
+```
+source .venv/bin/activate
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+pip install -r requirements.txt
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+python3 api.py
+```
+
+## Usage
+
+### Frontend
+
+Go to `localhost:3000` and upload a PDF file. Once the file is uploaded, you can ask questions about the PDF document.
+
+### Backend
+
+Go to `localhost:8000/#docs` and you will see the API documentation. You can test the API from there.
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+Made with ❤️ by [Ibrohim Abdivokhidov](https://www.linkedin.com/in/abdibrokhim/)
+
+
+💰 Sponsor PDF Cruncher development: 
+
+
+✅ Try out the app: https://pdfcruncher.vercel.app/
+
+
+☕️ Buy me Coffee: https://www.buymeacoffee.com/abdibrokhim
+
+🫶 Support me on Patreon: https://www.patreon.com/abdibrokhim
