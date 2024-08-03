@@ -30,3 +30,4 @@ backend/__pycache__
 env
 venv
 .vercel
+firebase.config.js

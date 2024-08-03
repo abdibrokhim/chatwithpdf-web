@@ -2,9 +2,14 @@ import React, { useEffect, useState } from "react";
 import icons from "./icons"; 
 import { Snackbar } from "@mui/material";
 import { Alert } from "@mui/material";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const App = () => {
+
   const [input, setInput] = useState("");
   const [chatItems, setChatItems] = useState([]);
   const [loading, setLoading] = useState(false);
